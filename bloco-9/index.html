@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Informe seu CEP</h1>
+
+  <form>
+    <label for="cep">CEP:</label>
+    <input type="number" id="cep" class="input-number" placeholder="_____-___">
+    <button id="btn">Enviar</button>
+
+  </form>
+  <small class="alert">Utilize apenas números no campo acima!</small>
+  <div class="endereco-completo">
+    <section class="endereco-container">
+      <p>Endereço:</p>
+      <p id="rua" class="endereco-item"></p>
+    </section>
+
+    <section class="endereco-container">
+      <p>Bairro:</p>
+      <p id="bairro" class="endereco-item"></p>
+    </section>
+
+    <section class="endereco-container">
+      <p>Estado:</p>
+      <p id="estado" class="endereco-item"></p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

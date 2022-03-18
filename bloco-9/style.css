@@ -1,0 +1,50 @@
+body {
+  background-color: #d9d8d7;
+}
+
+h1,
+label {
+  color: #260f01;
+}
+
+.input-number {
+  width: 80px;
+  padding: 6px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#btn {
+  padding: 6px;
+  color: #d9d8d7;
+  font-weight: bold;
+  background-color: #593718;
+}
+
+.endereco-completo {
+  margin-top: 20px;
+}
+
+.endereco-container {
+  display: flex;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.endereco-item {
+  margin-left: 5px;
+}
+
+form {
+  margin-bottom: 8px;
+}
+
+.alert {
+  color: rgb(252, 206, 0);
+  background-color: #593718;
+  padding: 3px;
+}
