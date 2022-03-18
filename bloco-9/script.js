@@ -31,12 +31,3 @@ const recebeObj = ({ rua, bairro, estado }) => {
 };
 
 btn.addEventListener('click', getValue);
-
-// Manipulação de DOM
-// Funções e parâmetros
-// Função depender de outra para ser executada e receber parâmetro
-// criar um objeto a partir de outro objeto
-// destructuring de objetos
-// eventos
-// Fetch em API
-// usando then / catch
