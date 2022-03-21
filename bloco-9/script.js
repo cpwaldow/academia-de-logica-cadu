@@ -1,7 +1,9 @@
 const input = document.getElementById('cep');
 const btn = document.getElementById('btn');
 
-const getValue = (event) => {
+// Fetch com Promise
+
+/* const getValue = (event) => {
   event.preventDefault();
   fetch(`https://viacep.com.br/ws/${input.value}/json/`)
     .then((response) => response.json())
@@ -14,10 +16,22 @@ const getValue = (event) => {
       input.value = '';
       return recebeObj(objEndereco);
     })
-    .catch(() => {
-      alert('Número inválido, tente novamente');
-      input.value = '';
-    });
+}; */
+
+// Fetch com async/await
+
+const getValue = async (event) => {
+  event.preventDefault();
+  const response = await fetch(`https://viacep.com.br/ws/${input.value}/json/`);
+  const data = await response.json();
+  input.value = '';
+
+  const objEndereco = {
+    rua: data.logradouro,
+    bairro: data.bairro,
+    estado: `${data.localidade} - ${data.uf}`,
+  };
+  return recebeObj(objEndereco);
 };
 
 const recebeObj = ({ rua, bairro, estado }) => {
