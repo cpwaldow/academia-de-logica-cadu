@@ -16,22 +16,33 @@ const btn = document.getElementById('btn');
       input.value = '';
       return recebeObj(objEndereco);
     })
+    .catch((error) => {
+      input.value = '';
+      alert('Valor inválido');
+    });
 }; */
 
 // Fetch com async/await
 
 const getValue = async (event) => {
   event.preventDefault();
-  const response = await fetch(`https://viacep.com.br/ws/${input.value}/json/`);
-  const data = await response.json();
-  input.value = '';
+  try {
+    const response = await fetch(
+      `https://viacep.com.br/ws/${input.value}/json/`,
+    );
+    const data = await response.json();
+    input.value = '';
 
-  const objEndereco = {
-    rua: data.logradouro,
-    bairro: data.bairro,
-    estado: `${data.localidade} - ${data.uf}`,
-  };
-  return recebeObj(objEndereco);
+    const objEndereco = {
+      rua: data.logradouro,
+      bairro: data.bairro,
+      estado: `${data.localidade} - ${data.uf}`,
+    };
+    return recebeObj(objEndereco);
+  } catch (error) {
+    input.value = '';
+    alert('Valor inválido');
+  }
 };
 
 const recebeObj = ({ rua, bairro, estado }) => {
