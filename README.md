@@ -16,7 +16,3 @@ Conceitos utilizados:
 - eventos
 - Fetch em API
 - usando then / catch
-
-Usabilidade:
-
-![mentoria](https://user-images.githubusercontent.com/59023543/158925002-a24d34fa-2ca0-4b4d-b471-5ec5fad5183c.gif)
